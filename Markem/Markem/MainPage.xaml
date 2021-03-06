@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Markem.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#8ab9d3" Padding="24" CornerRadius="0" Margin="0,0,0,0">
+            <Label Text="Markem" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <FlexLayout Direction="Column" VerticalOptions="CenterAndExpand">
+            <FlexLayout Direction="Row" HeightRequest="150" JustifyContent="SpaceAround" Margin="15">
+                <Button Text="Reaction Test"
+                        CornerRadius="16"
+                        WidthRequest="150"
+                        BackgroundColor="#eb4d4b"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+                <Button Text="Time Test"
+                        CornerRadius="16"
+                        WidthRequest="150"
+                        BackgroundColor="#fd9644"
+                        TextColor="White"
+                        FontAttributes="Bold" 
+                        FontSize="18"/>
+            </FlexLayout>
+            <FlexLayout Direction="Row" HeightRequest="150" JustifyContent="SpaceAround" Margin="15">
+                <Button Text="Number Test"
+                        CornerRadius="16"
+                        WidthRequest="150"
+                        BackgroundColor="#686de0"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+                <Button Text="Verbal Test"
+                        CornerRadius="16"
+                        WidthRequest="150"
+                        BackgroundColor="#FC427B"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+            </FlexLayout>
+            <FlexLayout Direction="Row" HeightRequest="150" JustifyContent="SpaceAround" Margin="15">
+                <Button Text="Visual Test"
+                        CornerRadius="16"
+                        WidthRequest="150"
+                        BackgroundColor="#45aaf2"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+                <Button Text="Sequence Test"
+                        CornerRadius="16"
+                        WidthRequest="150"
+                        BackgroundColor="#f7b731"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+            </FlexLayout>
+        </FlexLayout>
+    </StackLayout>
+
+</ContentPage>

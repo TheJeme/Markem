@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Markem.ReactionTest"
+             BackgroundColor="#eb4d4b">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout IsVisible="False" VerticalOptions="CenterAndExpand">
+                <Label Text="Reaction Test"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       Margin="0,0,0,30"/>
+                <Label Text="Test your reaction time."                
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontSize="16"/>
+            </StackLayout>
+            <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
+                <Label Text="Wait for green"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontSize="36"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
