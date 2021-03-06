@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Markem.MainPage">
+             x:Class="Markem.MainPage"
+             NavigationPage.HasNavigationBar="false">
 
     <StackLayout>
         <Frame BackgroundColor="#8ab9d3" Padding="24" CornerRadius="0" Margin="0,0,0,0">
@@ -15,14 +16,16 @@
                         BackgroundColor="#eb4d4b"
                         TextColor="White"
                         FontAttributes="Bold"
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="ReactionButton_Clicked"/>
                 <Button Text="Time Test"
                         CornerRadius="16"
                         WidthRequest="150"
                         BackgroundColor="#fd9644"
                         TextColor="White"
                         FontAttributes="Bold" 
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="TimeButton_Clicked"/>
             </FlexLayout>
             <FlexLayout Direction="Row" HeightRequest="150" JustifyContent="SpaceAround" Margin="15">
                 <Button Text="Number Test"
@@ -31,14 +34,16 @@
                         BackgroundColor="#686de0"
                         TextColor="White"
                         FontAttributes="Bold"
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="NumberButton_Clicked"/>
                 <Button Text="Verbal Test"
                         CornerRadius="16"
                         WidthRequest="150"
                         BackgroundColor="#FC427B"
                         TextColor="White"
                         FontAttributes="Bold"
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="VerbalButton_Clicked"/>
             </FlexLayout>
             <FlexLayout Direction="Row" HeightRequest="150" JustifyContent="SpaceAround" Margin="15">
                 <Button Text="Visual Test"
@@ -47,14 +52,16 @@
                         BackgroundColor="#45aaf2"
                         TextColor="White"
                         FontAttributes="Bold"
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="VisualButton_Clicked"/>
                 <Button Text="Sequence Test"
                         CornerRadius="16"
                         WidthRequest="150"
                         BackgroundColor="#f7b731"
                         TextColor="White"
                         FontAttributes="Bold"
-                        FontSize="18"/>
+                        FontSize="18"
+                        Clicked="SequenceButton_Clicked"/>
             </FlexLayout>
         </FlexLayout>
     </StackLayout>
