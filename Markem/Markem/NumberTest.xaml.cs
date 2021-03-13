@@ -16,5 +16,26 @@ namespace Markem
         {
             InitializeComponent();
         }
+
+        private void OnPlayTapped(object sender, EventArgs e)
+        {
+            StartGame();
+        }
+
+        private void SubmitButtonClicked(object sender, EventArgs e)
+        {
+            SubmitGuess();
+        }
+
+        private void StartGame()
+        {
+            MenuLayout.IsVisible = false;
+            GameLayout.IsVisible = true;
+        }
+
+        private void SubmitGuess()
+        {
+            AnswerLayout.
+        }
     }
 }

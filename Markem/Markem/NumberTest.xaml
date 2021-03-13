@@ -6,17 +6,69 @@
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
+            <StackLayout x:Name="MenuLayout"
+                         IsVisible="False"
+                         VerticalOptions="CenterAndExpand">
                 <Label Text="Number Test"
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
                        FontAttributes="Bold"
                        FontSize="36"
-                       Margin="0,0,0,30"/>
+                       Margin="0,0,0,20"/>
                 <Label Text="Test how long number you can remember."                
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
-                       FontSize="16"/>
+                       FontSize="16" Margin="0,0,0,60"/>
+                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Tapped="OnPlayTapped"
+                                NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout x:Name="GameLayout"
+                         IsVisible="True"
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="Level 1" 
+                       Margin="0,0,0,45"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       HorizontalOptions="CenterAndExpand"/>
+                
+                <StackLayout x:Name="AnswerLayout"
+                             IsVisible="False">
+                    <Label Text="17032003" 
+                       Margin="0,30"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="32"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                    <ProgressBar Margin="90,2"
+                             Progress="0.5"
+                             ProgressColor="White"/>
+                </StackLayout>
+                <StackLayout x:Name="GuessLayout"
+                             IsVisible="False">
+                    <Entry x:Name="GuessEntry" 
+                           Margin="90,30,90,2" 
+                           HorizontalTextAlignment="Center"
+                           Keyboard="Numeric"/>
+                    <Button x:Name="SubmitButton"
+                            Margin="90,2"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Submit"
+                            Clicked="SubmitButtonClicked"/>
+                </StackLayout>
+                <StackLayout x:Name="ResultLayout"
+                             IsVisible="True">
+                    <Label Text="Answer"/>
+                    <Label Text="17032003"/>
+
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
