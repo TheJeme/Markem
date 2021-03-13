@@ -7,15 +7,23 @@
     <ContentPage.Content>
         <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
             <Label Text="Visual Test"
-                       HorizontalOptions="CenterAndExpand"
-                       TextColor="White"
-                       FontAttributes="Bold"
-                       FontSize="36"
-                       Margin="0,0,0,30"/>
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="36"
+                   Margin="0,0,0,20"/>
             <Label Text="Test your visual memory with board of squares."                
-                       HorizontalOptions="CenterAndExpand"
-                       TextColor="White"
-                       FontSize="16"/>
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontSize="16"
+                   Margin="0,0,0,60"/>
+            <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                                Tapped="OnPlayTapped"
+                                NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -12,11 +12,19 @@
                        TextColor="White"
                        FontAttributes="Bold"
                        FontSize="36"
-                       Margin="0,0,0,30"/>
+                       Margin="0,0,0,20"/>
                 <Label Text="Test how many words you can remember."                
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
-                       FontSize="16"/>
+                       FontSize="16"
+                       Margin="0,0,0,60"/>
+                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Tapped="OnPlayTapped"
+                                NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

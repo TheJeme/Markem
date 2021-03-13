@@ -7,15 +7,23 @@
     <ContentPage.Content>
         <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
             <Label Text="Sequence Test"
-                       HorizontalOptions="CenterAndExpand"
-                       TextColor="White"
-                       FontAttributes="Bold"
-                       FontSize="36"
-                       Margin="0,0,0,30"/>
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="36"
+                   Margin="0,0,0,20"/>
             <Label Text="Test how long long patterns you can remember."                
-                       HorizontalOptions="CenterAndExpand"
-                       TextColor="White"
-                       FontSize="16"/>
+                   HorizontalOptions="CenterAndExpand"
+                   TextColor="White"
+                   FontSize="16"
+                   Margin="0,0,0,20"/>
+            <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                                Tapped="OnPlayTapped"
+                                NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

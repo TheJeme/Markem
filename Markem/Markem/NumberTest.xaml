@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout x:Name="MenuLayout"
-                         IsVisible="False"
+                         IsVisible="True"
                          VerticalOptions="CenterAndExpand">
                 <Label Text="Number Test"
                        HorizontalOptions="CenterAndExpand"
@@ -18,7 +18,8 @@
                 <Label Text="Test how long number you can remember."                
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
-                       FontSize="16" Margin="0,0,0,60"/>
+                       FontSize="16" 
+                       Margin="0,0,0,60"/>
                 <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
@@ -28,9 +29,9 @@
                 </Image>
             </StackLayout>
             <StackLayout x:Name="GameLayout"
-                         IsVisible="True"
+                         IsVisible="False"
                          VerticalOptions="CenterAndExpand">
-                <Label Text="Level 1" 
+                <Label x:Name="LevelLabel" Text="Level 1" 
                        Margin="0,0,0,45"
                        TextColor="White"
                        FontAttributes="Bold"
@@ -38,17 +39,21 @@
                        HorizontalOptions="CenterAndExpand"/>
                 
                 <StackLayout x:Name="AnswerLayout"
-                             IsVisible="False">
-                    <Label Text="17032003" 
-                       Margin="0,30"
-                       TextColor="White"
-                       FontAttributes="Bold"
-                       FontSize="32"
-                       HorizontalOptions="CenterAndExpand"
-                       VerticalOptions="CenterAndExpand"/>
-                    <ProgressBar Margin="90,2"
-                             Progress="0.5"
-                             ProgressColor="White"/>
+                             IsVisible="True">
+                    <Label x:Name="AnswerLabel"
+                           Text="17032003" 
+                           Margin="0,30"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="32"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           TextDecorations="Underline"/>
+                    <ProgressBar x:Name="TimerProgressBar" 
+                                 Margin="90,2"
+                                 Progress="0"
+                                 ProgressColor="White"
+                                 PropertyChanged="TimerProgressBarChanged"/>
                 </StackLayout>
                 <StackLayout x:Name="GuessLayout"
                              IsVisible="False">
@@ -64,10 +69,56 @@
                             Clicked="SubmitButtonClicked"/>
                 </StackLayout>
                 <StackLayout x:Name="ResultLayout"
-                             IsVisible="True">
-                    <Label Text="Answer"/>
-                    <Label Text="17032003"/>
-
+                             IsVisible="False">
+                    <Label Text="Real answer"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="22"
+                       HorizontalOptions="CenterAndExpand"/>
+                    <Label x:Name="RealAnswerLabel" 
+                           Text="17032003"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="22"
+                           HorizontalOptions="CenterAndExpand"
+                           TextDecorations="Underline"/>
+                    <Label Margin="1"/>
+                    <Label Text="Your answer"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="22"
+                       HorizontalOptions="CenterAndExpand"/>
+                    <Label x:Name="YourAnswerLabel"
+                           Text="12003"
+                           TextColor="White"
+                           FontAttributes="Bold"
+                           FontSize="22"
+                           HorizontalOptions="CenterAndExpand"
+                           TextDecorations="Underline"/>
+                    <StackLayout x:Name="AliveLayout"
+                                 IsVisible="True">
+                        <Button x:Name="ContinueButton"
+                            Margin="90,20"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Continue"
+                            Clicked="ContinueButtonClicked"/>
+                    </StackLayout>
+                    <StackLayout x:Name="GameOverLayout"
+                                 IsVisible="False">
+                        <Button x:Name="TryAgainButton"
+                            Margin="90,20"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Try again"
+                            Clicked="TryAgainButtonClicked"/>
+                        <Button x:Name="ExitButton"
+                            Margin="90,20"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Exit"
+                            Clicked="ExitButtonClicked"/>
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
