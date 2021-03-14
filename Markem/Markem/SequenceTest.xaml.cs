@@ -151,9 +151,12 @@ namespace Markem
                 }
                 board[row, column].BackgroundColor = guessColor;
                 await Task.Delay(500);
-                if (guessCount == currentLevel)
+                if (board[row, column].BackgroundColor == guessColor)
                 {
                     board[row, column].BackgroundColor = whiteColor;
+                }
+                if (guessCount == currentLevel)
+                {
                     NextLevel();
                 }
             }
