@@ -41,7 +41,7 @@
                 </StackLayout>
                 <StackLayout x:Name="ReadyLayout"
                              IsVisible="False">
-                    <Label Text="Tap!"
+                    <Label Text="Tap"
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
                        FontSize="36"/>

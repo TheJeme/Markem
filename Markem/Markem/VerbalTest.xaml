@@ -6,7 +6,9 @@
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
+            <StackLayout x:Name="MenuLayout"
+                         IsVisible="True"
+                         VerticalOptions="CenterAndExpand">
                 <Label Text="Verbal Test"
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
@@ -25,6 +27,41 @@
                                 NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
+            </StackLayout>
+            <StackLayout x:Name="GameLayout"
+                         IsVisible="False"
+                         VerticalOptions="CenterAndExpand">
+                
+                <Label x:Name="LevelLabel" 
+                       Text="Level 1" 
+                       Margin="0,0,0,45"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <Label x:Name="AnswerLabel"
+                        Text="Kuparikiisu" 
+                        Margin="0,30"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="32"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"/>
+
+                <Button x:Name="Button1"
+                            Margin="90,2"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="New"
+                            Clicked="Button1Clicked"/>
+                <Button x:Name="Button2"
+                            Margin="90,2"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Seen"
+                            Clicked="Button2Clicked"/>
+
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
