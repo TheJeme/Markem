@@ -6,7 +6,14 @@
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer
+                Tapped="OnScreenTapped"
+                NumberOfTapsRequired="1" />
+            </StackLayout.GestureRecognizers>
+            <StackLayout x:Name="MenuLayout"
+                         IsVisible="True"
+                         VerticalOptions="CenterAndExpand">
                 <Label Text="Time Test"
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
@@ -18,13 +25,36 @@
                        TextColor="White"
                        FontSize="16"
                        Margin="0,0,0,60"/>
-                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer
-                                Tapped="OnPlayTapped"
-                                NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>
-                </Image>
+                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98"/>
+            </StackLayout>
+
+            <StackLayout x:Name="GameLayout"
+                         IsVisible="False"
+                         VerticalOptions="CenterAndExpand">
+                <Label x:Name="TargetNameLabel"
+                           Text="Target"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="36"
+                           FontAttributes="Bold"/>
+                <Label x:Name="TargetTimeLabel"
+                           Text="0.0"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="36"
+                           Margin="0,0,0,50"
+                           TextDecorations="Underline"
+                           FontAttributes="Bold"/>
+                <Label x:Name="CountLabel"
+                           Text="0.0"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="28"/>
+                <Label x:Name="TryAgainLabel"
+                       Text=""
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontSize="28"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
