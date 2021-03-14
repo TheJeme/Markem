@@ -131,15 +131,29 @@ namespace Markem
 
         private async void SubmitBoardGuess(int row,  int column)
         {
-            board[row, column].BackgroundColor = guessColor;
-            await Task.Delay(500);
-            board[row, column].BackgroundColor = whiteColor;
-            guessList.Add(new int[] { row, column });
-            guessCount++;
-            if (string.Join(",", answerList[guessCount-1]) == string.Join(",", guessList[guessCount-1]))
+            if (guessCount >= currentLevel)
             {
+                return;
+            }
+
+            guessList.Add(new int[] { row, column });
+
+            if (string.Join(",", answerList[guessCount]) == string.Join(",", guessList[guessCount]))
+            {
+                guessCount++;
+                if (guessCount >= currentLevel)
+                {
+                    foreach (var btn in board)
+                    {
+                        btn.IsEnabled = false;
+                        btn.BackgroundColor = grayColor;
+                    }
+                }
+                board[row, column].BackgroundColor = guessColor;
+                await Task.Delay(500);
                 if (guessCount == currentLevel)
                 {
+                    board[row, column].BackgroundColor = whiteColor;
                     NextLevel();
                 }
             }
