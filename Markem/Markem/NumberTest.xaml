@@ -31,7 +31,8 @@
             <StackLayout x:Name="GameLayout"
                          IsVisible="False"
                          VerticalOptions="CenterAndExpand">
-                <Label x:Name="LevelLabel" Text="Level 1" 
+                <Label x:Name="LevelLabel" 
+                       Text="Level 1" 
                        Margin="0,0,0,45"
                        TextColor="White"
                        FontAttributes="Bold"

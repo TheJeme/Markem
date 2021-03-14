@@ -5,25 +5,120 @@
              BackgroundColor="#f7b731"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
-            <Label Text="Sequence Test"
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="White"
-                   FontAttributes="Bold"
-                   FontSize="36"
-                   Margin="0,0,0,20"/>
-            <Label Text="Test how long long patterns you can remember."                
-                   HorizontalOptions="CenterAndExpand"
-                   TextColor="White"
-                   FontSize="16"
-                   Margin="0,0,0,20"/>
-            <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                                Tapped="OnPlayTapped"
-                                NumberOfTapsRequired="1" />
-                </Image.GestureRecognizers>
-            </Image>
+        <StackLayout>
+            <StackLayout x:Name="MenuLayout" 
+                         IsVisible="True" 
+                         VerticalOptions="CenterAndExpand">
+                <Label Text="Sequence Test"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       Margin="0,0,0,20"/>
+                <Label Text="Test how long long patterns you can remember."                
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontSize="16"
+                       Margin="0,0,0,20"/>
+                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                                    Tapped="OnPlayTapped"
+                                    NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout x:Name="GameLayout"
+                         IsVisible="False"
+                         VerticalOptions="CenterAndExpand">
+                <Label x:Name="LevelLabel" 
+                       Text="Level 1" 
+                       Margin="0,0,0,45"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="36"
+                       HorizontalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal"
+                                 HeightRequest="80"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="Board00Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board00Button_Clicked"/>
+
+                        <Button x:Name="Board01Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board01Button_Clicked"/>
+
+                        <Button x:Name="Board02Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board02Button_Clicked"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                                 HeightRequest="80"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="Board10Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board10Button_Clicked"/>
+
+                        <Button x:Name="Board11Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board11Button_Clicked"/>
+
+                        <Button x:Name="Board12Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board12Button_Clicked"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                                 HeightRequest="80"
+                                 HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="Board20Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board20Button_Clicked"/>
+
+                        <Button x:Name="Board21Button" 
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board21Button_Clicked"/>
+
+                        <Button x:Name="Board22Button"
+                                CornerRadius="16"
+                                WidthRequest="80"
+                                BackgroundColor="#FFF"
+                                Clicked="Board22Button_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout x:Name="GameOverLayout"
+                             IsVisible="False">
+                    <Button x:Name="TryAgainButton"
+                            Margin="90,40,90,0"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Try again"
+                            Clicked="TryAgainButtonClicked"/>
+                    <Button x:Name="ExitButton"
+                            Margin="90,20"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Exit"
+                            Clicked="ExitButtonClicked"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

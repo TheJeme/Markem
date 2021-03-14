@@ -16,5 +16,10 @@ namespace Markem
         {
             InitializeComponent();
         }
+
+        private void OnPlayTapped(object sender, EventArgs e)
+        {
+
+        }
     }
 }
