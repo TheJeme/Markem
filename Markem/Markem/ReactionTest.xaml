@@ -2,11 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Markem.ReactionTest"
+             x:Name="ReactionPage"
              BackgroundColor="#eb4d4b"
              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout IsVisible="False" VerticalOptions="CenterAndExpand">
+        <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer
+                Tapped="OnScreenTapped"
+                NumberOfTapsRequired="1" />
+        </StackLayout.GestureRecognizers>
+            <StackLayout x:Name="MenuLayout"
+                         IsVisible="True"
+                         VerticalOptions="CenterAndExpand">
                 <Label Text="Reaction Test"
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
@@ -18,19 +26,41 @@
                        TextColor="White"
                        FontSize="16"
                        Margin="0,0,0,60"/>
-                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer
-                                Tapped="OnPlayTapped"
-                                NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>
-                </Image>
+                <Image Source="play.jpg" HeightRequest="98" WidthRequest="98"/>
             </StackLayout>
-            <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
-                <Label Text="Wait for green"
+            
+            <StackLayout x:Name="GameLayout"
+                         IsVisible="False"
+                         VerticalOptions="CenterAndExpand">
+                <StackLayout x:Name="WaitLayout"
+                             IsVisible="False">
+                    <Label Text="Wait for green"
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
                        FontSize="36"/>
+                </StackLayout>
+                <StackLayout x:Name="ReadyLayout"
+                             IsVisible="False">
+                    <Label Text="Tap!"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontSize="36"/>
+                </StackLayout>
+                <StackLayout x:Name="ResultLayout"
+                             IsVisible="False">
+                    <Label x:Name="TimeLabel"
+                           Text="420 ms"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="36"
+                           Margin="15"
+                           FontAttributes="Bold"/>
+                    <Label x:Name="ResultLabel"
+                           Text="Tap to continue"
+                           HorizontalOptions="CenterAndExpand"
+                           TextColor="White"
+                           FontSize="24"/>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
