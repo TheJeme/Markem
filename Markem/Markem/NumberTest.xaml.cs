@@ -87,7 +87,7 @@ namespace Markem
             currentLevel++;
             LevelLabel.Text = $"Level {currentLevel}";
 
-            answer = random.Next(Convert.ToInt32(Math.Pow(10, currentLevel-1)), Convert.ToInt32(Math.Pow(10, currentLevel) -1)).ToString();
+            answer = random.Next(Convert.ToInt32(Math.Pow(10, currentLevel-1)), Convert.ToInt32(Math.Pow(10, currentLevel))).ToString();
             AnswerLabel.Text = answer;
         }
 

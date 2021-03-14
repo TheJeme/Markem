@@ -169,8 +169,8 @@ namespace Markem
 
             guessList.Clear();
 
-            int row = random.Next(0, 2);
-            int column = random.Next(0, 2);
+            int row = random.Next(0, 3);
+            int column = random.Next(0, 3);
             answerList.Add(new int[] { row, column });
 
             await Task.Delay(1500);
