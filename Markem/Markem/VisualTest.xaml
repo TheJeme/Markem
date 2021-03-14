@@ -4,8 +4,11 @@
              x:Class="Markem.VisualTest"
              BackgroundColor="#45aaf2"
              NavigationPage.HasNavigationBar="false">
-    <ContentPage.Content>
-        <StackLayout IsVisible="True" VerticalOptions="CenterAndExpand">
+<ContentPage.Content>
+    <StackLayout>
+        <StackLayout x:Name="MenuLayout" 
+                     IsVisible="False" 
+                     VerticalOptions="CenterAndExpand">
             <Label Text="Visual Test"
                    HorizontalOptions="CenterAndExpand"
                    TextColor="White"
@@ -16,14 +19,208 @@
                    HorizontalOptions="CenterAndExpand"
                    TextColor="White"
                    FontSize="16"
-                   Margin="0,0,0,60"/>
+                   Margin="0,0,0,20"/>
             <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
-                                Tapped="OnPlayTapped"
-                                NumberOfTapsRequired="1" />
+                        Tapped="OnPlayTapped"
+                        NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout x:Name="GameLayout"
+                     IsVisible="True"
+                     VerticalOptions="CenterAndExpand">
+            <Label x:Name="LevelLabel" 
+                   Text="Level 1" 
+                   Margin="0,0,0,45"
+                   TextColor="White"
+                   FontAttributes="Bold"
+                   FontSize="36"
+                   HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal"
+                             HeightRequest="60"
+                             HorizontalOptions="CenterAndExpand">
+                    <Button x:Name="Board00Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board00Button_Clicked"/>
+
+                    <Button x:Name="Board01Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board01Button_Clicked"/>
+
+                    <Button x:Name="Board02Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board02Button_Clicked"/>
+
+                    <Button x:Name="Board03Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board03Button_Clicked"/>
+                    
+                    <Button x:Name="Board04Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board04Button_Clicked"/>
+                    </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             HeightRequest="60"
+                             HorizontalOptions="CenterAndExpand">
+                    <Button x:Name="Board10Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board10Button_Clicked"/>
+
+                    <Button x:Name="Board11Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board11Button_Clicked"/>
+
+                    <Button x:Name="Board12Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board12Button_Clicked"/>
+                    
+                    <Button x:Name="Board13Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board13Button_Clicked"/>
+                    
+                    <Button x:Name="Board14Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board14Button_Clicked"/>
+                    </StackLayout>
+                <StackLayout Orientation="Horizontal"
+                             HeightRequest="60"
+                             HorizontalOptions="CenterAndExpand">
+                    <Button x:Name="Board20Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board20Button_Clicked"/>
+
+                    <Button x:Name="Board21Button" 
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board21Button_Clicked"/>
+
+                    <Button x:Name="Board22Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board22Button_Clicked"/>
+
+                    <Button x:Name="Board23Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board23Button_Clicked"/>
+                    
+                    <Button x:Name="Board24Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board24Button_Clicked"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                             HeightRequest="60"
+                             HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="Board30Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board30Button_Clicked"/>
+
+                        <Button x:Name="Board31Button" 
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board31Button_Clicked"/>
+
+                        <Button x:Name="Board32Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board32Button_Clicked"/>
+
+                        <Button x:Name="Board33Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board33Button_Clicked"/>
+                        
+                        <Button x:Name="Board34Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board34Button_Clicked"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                             HeightRequest="60"
+                             HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="Board40Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board40Button_Clicked"/>
+
+                        <Button x:Name="Board41Button" 
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board41Button_Clicked"/>
+
+                        <Button x:Name="Board42Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board42Button_Clicked"/>
+
+                        <Button x:Name="Board43Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board43Button_Clicked"/>
+
+                        <Button x:Name="Board44Button"
+                            CornerRadius="16"
+                            WidthRequest="60"
+                            BackgroundColor="#FFF"
+                            Clicked="Board44Button_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+            <StackLayout x:Name="GameOverLayout"
+                             IsVisible="False">
+                <Button x:Name="TryAgainButton"
+                            Margin="90,40,90,0"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Try again"
+                            Clicked="TryAgainButtonClicked"/>
+                <Button x:Name="ExitButton"
+                            Margin="90,20"
+                            BackgroundColor="#ff5453" 
+                            TextColor="White" 
+                            Text="Exit"
+                            Clicked="ExitButtonClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage.Content>
 </ContentPage>

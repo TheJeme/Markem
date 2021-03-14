@@ -23,8 +23,8 @@
                 <Image Source="play.jpg" HeightRequest="98" WidthRequest="98">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
-                                    Tapped="OnPlayTapped"
-                                    NumberOfTapsRequired="1" />
+                            Tapped="OnPlayTapped"
+                            NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
             </StackLayout>
