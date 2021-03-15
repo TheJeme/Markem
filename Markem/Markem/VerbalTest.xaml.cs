@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,6 +11,8 @@ namespace Markem
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class VerbalTest : ContentPage
     {
+        private Random random;
+
         private bool isAlive;
         private int currentLevel;
         private string answerWord;
@@ -20,6 +21,7 @@ namespace Markem
 
         public VerbalTest()
         {
+            random = new Random();
             seenWords = new List<String>();
             InitializeComponent();
         }
@@ -66,7 +68,7 @@ namespace Markem
             Button1.Text = "New";
             Button2.Text = "Seen";
             isAlive = true;
-            currentLevel = 0;
+            currentLevel = 1;
             LevelLabel.Text = $"Level {currentLevel}";
         }
         private void Die()
@@ -76,13 +78,24 @@ namespace Markem
             Button1.Text = "Try Again";
             Button2.Text = "Exit";
         }
-
         private void NextLevel()
+
         {
             currentLevel++;
             LevelLabel.Text = $"Level {currentLevel}";
 
-            answerWord = "kiisu";
+            if (random.NextDouble() < 0.3 && seenWords.Count() > 0)
+            {
+                int randomIndexNumber = random.Next(seenWords.Count);
+                answerWord = seenWords[randomIndexNumber];
+            }
+            else
+            {
+                var lines = File.ReadAllLines(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "words.txt"));
+                int randomLineNumber = random.Next(0, lines.Length - 1);
+                answerWord = lines[randomLineNumber];
+            }
+
             seenWords.Add(answerWord);
             AnswerLabel.Text = $"{answerWord}";
         }
