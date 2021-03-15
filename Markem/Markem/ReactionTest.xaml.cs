@@ -22,7 +22,7 @@ namespace Markem
         {
             random = new Random();
 
-            waitColor = Color.FromHex("#FC427B");
+            waitColor = Color.FromHex("#eb4d4b");
             resultColor = Color.FromHex("#45aaf2");
             readyColor = Color.FromHex("#4cd137");
 

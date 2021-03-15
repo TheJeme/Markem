@@ -86,10 +86,15 @@ namespace Markem
         {
             currentLevel++;
             LevelLabel.Text = $"Level {currentLevel}";
+            answer = "";
 
-            answer = random.Next(Convert.ToInt32(Math.Pow(10, currentLevel-1)), Convert.ToInt32(Math.Pow(10, currentLevel))).ToString();
+            for (int i = 0; i < currentLevel; i++)
+            {
+                answer += random.Next(0, 9).ToString();
+            }
             AnswerLabel.Text = answer;
         }
+
 
         private void CheckAnswer()
         {
@@ -141,7 +146,7 @@ namespace Markem
         private async void StartTimer()
         {
             TimerProgressBar.Progress = 0;
-            await TimerProgressBar.ProgressTo(1, 5000, Easing.Linear);
+            await TimerProgressBar.ProgressTo(1, 5000+Convert.ToUInt32(currentLevel*100), Easing.Linear);
         }
     }
 }
