@@ -281,7 +281,17 @@ namespace Markem
 
             await Task.Delay(1000);
 
-            for (int i = 0; i < currentLevel; i++)
+            int answerCount;
+            if (currentLevel < 15)
+            {
+                answerCount = currentLevel;
+            }
+            else
+            {
+                answerCount = 15;
+            }
+
+            for (int i = 0; i < answerCount; i++)
             {
                 int row = random.Next(0, 6);
                 int column = random.Next(0, 6);
