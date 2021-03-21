@@ -7,7 +7,7 @@
 <ContentPage.Content>
     <StackLayout>
         <StackLayout x:Name="MenuLayout" 
-                     IsVisible="False" 
+                     IsVisible="True" 
                      VerticalOptions="CenterAndExpand">
             <Label Text="Visual Test"
                    HorizontalOptions="CenterAndExpand"
@@ -29,7 +29,7 @@
             </Image>
         </StackLayout>
         <StackLayout x:Name="GameLayout"
-                     IsVisible="True"
+                     IsVisible="False"
                      VerticalOptions="CenterAndExpand">
             <Label x:Name="LevelLabel" 
                    Text="Level 1" 
@@ -76,7 +76,7 @@
                         CornerRadius="16"
                         WidthRequest="55"
                         BackgroundColor="#FFF"
-                        />
+                        Clicked="Board05Button_Clicked"/>
                     </StackLayout>
                 <StackLayout Orientation="Horizontal"
                              HeightRequest="55"
@@ -115,7 +115,7 @@
                         CornerRadius="16"
                         WidthRequest="55"
                         BackgroundColor="#FFF"
-                        />
+                        Clicked="Board15Button_Clicked"/>
                     </StackLayout>
                 <StackLayout Orientation="Horizontal"
                              HeightRequest="55"
@@ -154,7 +154,7 @@
                         CornerRadius="16"
                         WidthRequest="55"
                         BackgroundColor="#FFF"
-                        />
+                        Clicked="Board25Button_Clicked"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"
                              HeightRequest="55"
@@ -193,7 +193,7 @@
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board35Button_Clicked"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal"
                              HeightRequest="55"
@@ -232,7 +232,7 @@
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board45Button_Clicked"/>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal"
@@ -242,43 +242,43 @@
                             CornerRadius="16"
                             WidthRequest="50"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board50Button_Clicked"/>
 
                         <Button x:Name="Board51Button" 
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board51Button_Clicked"/>
 
                         <Button x:Name="Board52Button"
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board52Button_Clicked"/>
 
                         <Button x:Name="Board53Button"
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board53Button_Clicked"/>
 
                         <Button x:Name="Board54Button"
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board54Button_Clicked"/>
 
                         <Button x:Name="Board55Button"
                             CornerRadius="16"
                             WidthRequest="55"
                             BackgroundColor="#FFF"
-                            />
+                            Clicked="Board55Button_Clicked"/>
                     </StackLayout>
                 </StackLayout>
             <StackLayout x:Name="GameOverLayout"
                              IsVisible="False">
                 <Button x:Name="TryAgainButton"
-                            Margin="90,40,90,0"
+                            Margin="90,20,90,0"
                             BackgroundColor="#ff5453" 
                             TextColor="White" 
                             Text="Try again"

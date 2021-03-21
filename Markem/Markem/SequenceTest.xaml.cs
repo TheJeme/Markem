@@ -14,6 +14,7 @@ namespace Markem
 
         private int currentLevel;
         private int guessCount;
+
         private Color answerColor;
         private Color guessColor;
         private Color whiteColor;

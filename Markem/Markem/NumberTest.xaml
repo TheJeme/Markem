@@ -61,7 +61,8 @@
                     <Entry x:Name="GuessEntry" 
                            Margin="90,30,90,2" 
                            HorizontalTextAlignment="Center"
-                           Keyboard="Numeric"/>
+                           Keyboard="Numeric"
+                           TextColor="White"/>
                     <Button x:Name="SubmitButton"
                             Margin="90,2"
                             BackgroundColor="#ff5453" 
