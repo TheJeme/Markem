@@ -68,179 +68,215 @@ namespace Markem
         private void Board00Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(0, 0);
+            Board00Button.IsEnabled = false;
         }
 
         private void Board01Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(0, 1);
+            Board01Button.IsEnabled = false;
         }
 
         private void Board02Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(0, 2);
+            Board02Button.IsEnabled = false;
         }
 
         private void Board03Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(0, 3);
+            Board03Button.IsEnabled = false;
         }
 
         private void Board04Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(0, 4);
+            Board04Button.IsEnabled = false;
         }
 
         private void Board05Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(0, 5);
+            Board05Button.IsEnabled = false;
         }
 
         private void Board10Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(1, 0);
+            Board10Button.IsEnabled = false;
         }
 
         private void Board11Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(1, 1);
+            Board11Button.IsEnabled = false;
         }
 
         private void Board12Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(1, 2);
+            Board12Button.IsEnabled = false;
         }
 
         private void Board13Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(1, 3);
+            Board13Button.IsEnabled = false;
         }
 
         private void Board14Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(1, 4);
+            Board14Button.IsEnabled = false;
         }
 
         private void Board15Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(1, 5);
+            Board15Button.IsEnabled = false;
         }
 
         private void Board20Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(2, 0);
+            Board20Button.IsEnabled = false;
         }
 
         private void Board21Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(2, 1);
+            Board21Button.IsEnabled = false;
         }
 
         private void Board22Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(2, 2);
+            Board22Button.IsEnabled = false;
         }
 
         private void Board23Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(2, 3);
+            Board23Button.IsEnabled = false;
         }
 
         private void Board24Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(2, 4);
+            Board24Button.IsEnabled = false;
         }
 
         private void Board25Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(2, 5);
+            Board25Button.IsEnabled = false;
         }
 
         private void Board30Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(3, 0);
+            Board30Button.IsEnabled = false;
         }
 
         private void Board31Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(3, 1);
+            Board31Button.IsEnabled = false;
         }
 
         private void Board32Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(3, 2);
+            Board32Button.IsEnabled = false;
         }
 
         private void Board33Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(3, 3);
+            Board33Button.IsEnabled = false;
         }
 
         private void Board34Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(3, 4);
+            Board34Button.IsEnabled = false;
         }
 
         private void Board35Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(3, 5);
+            Board35Button.IsEnabled = false;
         }
 
         private void Board40Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(4, 0);
+            Board40Button.IsEnabled = false;
         }
         private void Board41Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(4, 1);
+            Board41Button.IsEnabled = false;
         }
 
         private void Board42Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(4, 2);
+            Board42Button.IsEnabled = false;
         }
 
         private void Board43Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(4, 3);
+            Board43Button.IsEnabled = false;
         }
 
         private void Board44Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(4, 4);
+            Board44Button.IsEnabled = false;
         }
 
         private void Board45Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(4, 5);
+            Board45Button.IsEnabled = false;
         }
 
         private void Board50Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(5, 0);
+            Board50Button.IsEnabled = false;
         }
         private void Board51Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(5, 1);
+            Board51Button.IsEnabled = false;
         }
 
         private void Board52Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(5, 2);
+            Board52Button.IsEnabled = false;
         }
 
         private void Board53Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(5, 3);
+            Board53Button.IsEnabled = false;
         }
 
         private void Board54Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(5, 4);
+            Board54Button.IsEnabled = false;
         }
 
         private void Board55Button_Clicked(object sender, EventArgs e)
         {
             SubmitBoardGuess(5, 5);
+            Board55Button.IsEnabled = false;
         }
 
         // Functions
@@ -314,7 +350,7 @@ namespace Markem
                 board[row, column].BackgroundColor = answerColor;
             }
 
-            await Task.Delay(1000);
+            await Task.Delay(1000 + currentLevel * 50);
 
             foreach (var btn in board)
             {
