@@ -15,7 +15,7 @@
                        FontAttributes="Bold"
                        FontSize="36"
                        Margin="0,0,0,20"/>
-                <Label Text="Test how long long patterns you can remember."                
+                <Label Text="Test how long patterns you can remember."                
                        HorizontalOptions="CenterAndExpand"
                        TextColor="White"
                        FontSize="16"
