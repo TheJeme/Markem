@@ -1,2 +1,2 @@
 # Markem
- Human Benchmark on Android
+Markem is an app to test your mind with games and tests.
