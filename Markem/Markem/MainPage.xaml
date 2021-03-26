@@ -5,7 +5,7 @@
              NavigationPage.HasNavigationBar="false">
 
     <StackLayout>
-        <Frame BackgroundColor="#8ab9d3" Padding="24" CornerRadius="0" Margin="0,0,0,0">
+        <Frame BackgroundColor="#8ab9d3" Padding="18" CornerRadius="0" Margin="0,0,0,0">
             <Label Text="Markem" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <FlexLayout Direction="Column" VerticalOptions="CenterAndExpand">
@@ -21,7 +21,7 @@
                 <Button Text="Time Test"
                         CornerRadius="16"
                         WidthRequest="150"
-                        BackgroundColor="#fd9644"
+                        BackgroundColor="#ff6348"
                         TextColor="White"
                         FontAttributes="Bold" 
                         FontSize="18"
@@ -39,7 +39,7 @@
                 <Button Text="Verbal Test"
                         CornerRadius="16"
                         WidthRequest="150"
-                        BackgroundColor="#FC427B"
+                        BackgroundColor="#cd84f1"
                         TextColor="White"
                         FontAttributes="Bold"
                         FontSize="18"
